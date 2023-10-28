@@ -1,0 +1,9 @@
+set(SOURCES
+    src/bot.cc
+    src/bot.h
+    src/content.cc
+    src/content.h
+    src/files.cc
+    src/files.h
+    src/main.cc
+)

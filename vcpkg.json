@@ -1,0 +1,8 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "air-drop-bot",
+  "version-string": "0.9.9",
+  "license": "MIT",
+  "dependencies": ["spdlog", "uni-algo", "tgbot-cpp", "yaml-cpp"],
+  "builtin-baseline": "2815578f4a3486cec24c9b07d17e18e03bbaf667"
+}

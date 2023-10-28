@@ -1,0 +1,88 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 25
+  },
+  "configurePresets": [
+    {
+      "name": "debug-x64-windows",
+      "displayName": "Config Debug x64 Windows",
+      "generator": "Visual Studio 17 2022",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "${env:VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-windows",
+        "CMAKE_CXX_FLAGS": "/EHsc /MP /W4 /WX",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_C_STANDARD_REQUIRED": "YES"
+      },
+      "architecture": {
+        "strategy": "set",
+        "value": "x64"
+      },
+      "toolset": "v143"
+    },
+    {
+      "name": "release-x64-windows",
+      "displayName": "Config Release x64 Windows",
+      "inherits": "debug-x64-windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "debug-x64-linux",
+      "displayName": "Config Debug x64 Linux",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "${env:VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-linux",
+        "CMAKE_CXX_STANDARD_REQUIRED": "YES",
+        "CMAKE_C_STANDARD_REQUIRED": "YES"
+      },
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+    {
+      "name": "release-x64-linux",
+      "displayName": "Config Release x64 Linux",
+      "inherits": "debug-x64-linux",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "build-debug-x64-windows",
+      "displayName": "Debug Build x64 Windows",
+      "configurePreset": "debug-x64-windows",
+      "configuration": "Debug"
+    },
+    {
+      "name": "build-release-x64-windows",
+      "displayName": "Release Build x64 Windows",
+      "configurePreset": "release-x64-windows",
+      "configuration": "Release"
+    },
+    {
+      "name": "build-debug-x64-linux",
+      "displayName": "Debug Build x64 Linux",
+      "configurePreset": "debug-x64-linux",
+      "configuration": "Debug"
+    },
+    {
+      "name": "build-release-x64-linux",
+      "displayName": "Release Build x64 Linux",
+      "configurePreset": "release-x64-linux",
+      "configuration": "Release"
+    }
+  ]
+}
