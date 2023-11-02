@@ -24,10 +24,15 @@ endif()
 # https://github.com/reo7sp/tgbot-cpp/blob/master/samples/echobot/CMakeLists.txt
 set(TG_LIB "UNSUPPORTED COMPILER")
 if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
-set(TG_LIB ${VCPKG_INSTALLED_DIR}/x64-windows/lib/TgBot.lib)
+    set(TG_LIB ${VCPKG_INSTALLED_DIR}/x64-windows/lib/TgBot.lib)
 endif()
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-set(TG_LIB ${VCPKG_INSTALLED_DIR}/x64-linux/lib/libTgBot.a)
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_x64")
+        set(TG_LIB ${VCPKG_INSTALLED_DIR}/x64-linux/lib/libTgBot.a)
+    endif()
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
+        set(TG_LIB ${VCPKG_INSTALLED_DIR}/arm64-linux/lib/libTgBot.a)
+    endif()
 endif()
 
 # gather all output in the local bin folder
