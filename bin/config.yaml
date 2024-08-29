@@ -1,0 +1,17 @@
+# no token - no bot
+token: 'your-token'
+# optional fields
+name: 'Telegram Bot'
+username: 'telegram_bot'
+# bot services
+spam_filter:
+  every_n_sec: 10
+  # threshold to block user
+  msg_count: 10
+  block_time_sec: 10
+dialog_cleaner:
+  every_n_sec: 10
+  # how long a dialog exist before deletion
+  lifetime_sec: 30
+write_stats:
+  every_n_sec: 30

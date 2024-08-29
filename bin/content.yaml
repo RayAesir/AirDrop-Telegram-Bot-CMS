@@ -1,0 +1,394 @@
+# File type:
+# required field: path (content folder)
+# required field: mime
+files:
+  start_image:
+    path: 'content/start.jpg'
+    mime: 'image/jpeg'
+  start_text:
+    path: 'content/start.md'
+    mime: 'text/markdown'
+    #
+  join_image:
+    path: 'content/join.jpg'
+    mime: 'image/jpeg'
+  join_text:
+    path: 'content/join.md'
+    mime: 'text/markdown'
+  join_online_image:
+    path: 'content/join/online.jpg'
+    mime: 'image/jpeg'
+  join_online_text1:
+    path: 'content/join/online1.md'
+    mime: 'text/markdown'
+  join_online_text2:
+    path: 'content/join/online2.md'
+    mime: 'text/markdown'
+  join_daily_image:
+    path: 'content/join/daily.jpg'
+    mime: 'image/jpeg'
+  join_daily_text1:
+    path: 'content/join/daily1.md'
+    mime: 'text/markdown'
+  join_daily_text2:
+    path: 'content/join/daily2.md'
+    mime: 'text/markdown'
+  join_daily_text3:
+    path: 'content/join/daily3.md'
+    mime: 'text/markdown'
+  join_practice_image:
+    path: 'content/join/practice.jpg'
+    mime: 'image/jpeg'
+  join_practice_text1:
+    path: 'content/join/practice1.md'
+    mime: 'text/markdown'
+  join_practice_text2:
+    path: 'content/join/practice2.md'
+    mime: 'text/markdown'
+  join_contract_image:
+    path: 'content/join/contract.jpg'
+    mime: 'image/jpeg'
+  join_contract_text1:
+    path: 'content/join/contract1.md'
+    mime: 'text/markdown'
+  join_contract_text2:
+    path: 'content/join/contract2.md'
+    mime: 'text/markdown'
+  join_submit_image:
+    path: 'content/join/submit.jpg'
+    mime: 'image/jpeg'
+  join_submit_text:
+    path: 'content/join/submit.md'
+    mime: 'text/markdown'
+    #
+  call_image:
+    path: 'content/call.jpg'
+    mime: 'image/jpeg'
+  call_text:
+    path: 'content/call.md'
+    mime: 'text/markdown'
+  call_diag_text:
+    path: 'content/call_diag.md'
+    mime: 'text/markdown'
+    #
+  chat_image:
+    path: 'content/chat.jpg'
+    mime: 'image/jpeg'
+    #
+  faq_text:
+    path: 'content/faq.md'
+    mime: 'text/markdown'
+  faq_1_text:
+    path: 'content/faq/1.md'
+    mime: 'text/markdown'
+  faq_2_text:
+    path: 'content/faq/2.md'
+    mime: 'text/markdown'
+  faq_3_text:
+    path: 'content/faq/3.md'
+    mime: 'text/markdown'
+  faq_4_text:
+    path: 'content/faq/4.md'
+    mime: 'text/markdown'
+  faq_5_text:
+    path: 'content/faq/5.md'
+    mime: 'text/markdown'
+  faq_6_text:
+    path: 'content/faq/6.md'
+    mime: 'text/markdown'
+  faq_7_text:
+    path: 'content/faq/7.md'
+    mime: 'text/markdown'
+  faq_8_text:
+    path: 'content/faq/8.md'
+    mime: 'text/markdown'
+  faq_9_text:
+    path: 'content/faq/9.md'
+    mime: 'text/markdown'
+
+# Button type:
+# required field: text
+# optional field: callback_data (page or dialog field)
+# optional field: url
+buttons:
+  start:
+    text: 'Return to Main Menu'
+    callback_data: 'start_page:end_diag'
+    #
+  join:
+    text: 'Join the school!'
+    callback_data: 'join_page'
+  join_online:
+    text: 'Online education'
+    callback_data: 'join_online_page'
+  join_daily:
+    text: 'Full-Time education'
+    callback_data: 'join_daily_page'
+  join_practice:
+    text: 'Practice'
+    callback_data: 'join_practice_page'
+  join_contract:
+    text: 'Make agreement'
+    callback_data: 'join_contract_page'
+  join_submit:
+    text: 'Submit education'
+    callback_data: 'join_submit_diag'
+    # return buttons
+  join_return_main:
+    text: 'Go back'
+    callback_data: 'join_page:end_diag'
+  join_return_online:
+    text: 'Go back'
+    callback_data: 'join_online_page'
+  join_return_daily:
+    text: 'Go back'
+    callback_data: 'join_daily_page'
+  join_return_practice:
+    text: 'Go back'
+    callback_data: 'join_practice_page'
+    #
+  call:
+    text: 'Contact the administration'
+    callback_data: 'call_page'
+  call_question:
+    text: 'Ask a question'
+    callback_data: 'call_question_diag'
+  call_manager:
+    text: 'Call the manager'
+    callback_data: 'call_manager_diag'
+  call_news:
+    text: 'Suggest a news item'
+    callback_data: 'call_news_diag'
+    # return buttons
+  call_return_main:
+    text: 'Go back'
+    callback_data: 'call_page:end_diag'
+    #
+  chat:
+    text: 'Links'
+    callback_data: 'chat_page'
+  chat_join_url:
+    text: 'Join the chat!'
+    url: 'https://example.com'
+  chat_channel_url:
+    text: 'Subscribe!'
+    url: 'https://example.com'
+    #
+  faq:
+    text: 'FAQ'
+    callback_data: 'faq_page'
+  faq1:
+    text: '1'
+    callback_data: 'faq_1_page'
+  faq2:
+    text: '2'
+    callback_data: 'faq_2_page'
+  faq3:
+    text: '3'
+    callback_data: 'faq_3_page'
+  faq4:
+    text: '4'
+    callback_data: 'faq_4_page'
+  faq5:
+    text: '5'
+    callback_data: 'faq_5_page'
+  faq6:
+    text: '6'
+    callback_data: 'faq_6_page'
+  faq7:
+    text: '7'
+    callback_data: 'faq_7_page'
+  faq8:
+    text: '8'
+    callback_data: 'faq_8_page'
+  faq9:
+    text: '9'
+    callback_data: 'faq_9_page'
+
+# Markup type:
+# required field: 1D or 2D array of Button type
+markups:
+  start_btn:
+    - ['join']
+    - ['call']
+    - ['chat']
+    - ['faq']
+    #
+  join_btn:
+    - ['join_online']
+    - ['join_daily']
+    - ['join_practice']
+    - ['join_contract']
+    - ['join_submit']
+    - ['start']
+  join_online_btn:
+    - ['join_daily']
+    - ['join_return_main']
+  join_daily_btn:
+    - ['join_practice']
+    - ['join_return_online']
+  join_practice_btn:
+    - ['join_contract']
+    - ['join_return_daily']
+  join_contract_btn:
+    - ['join_submit']
+    - ['join_return_practice']
+  join_return_btn:
+    - ['join_return_main']
+    - ['start']
+    #
+  call_btn:
+    - ['call_question']
+    - ['call_manager']
+    - ['call_news']
+    - ['start']
+  call_return_btn:
+    - ['call_return_main']
+    #
+  chat_btn:
+    - ['chat_join_url']
+    - ['chat_channel_url']
+    - ['start']
+    #
+  faq_btn:
+    - ['faq1', 'faq2', 'faq3']
+    - ['faq4', 'faq5', 'faq6']
+    - ['faq7', 'faq8', 'faq9']
+    - ['start']
+  faq_question_btn:
+    - ['call_manager']
+    - ['faq']
+
+# Post type:
+# required field: text (string or File type)
+# optional field: media (File Type)
+# optional field: markup (Markup type)
+# Page type:
+# required field: array of Post type
+start_page:
+  - text: 'start_text'
+    media: 'start_image'
+    markup: 'start_btn'
+
+pages:
+  join_page:
+    - text: 'join_text'
+      media: 'join_image'
+      markup: 'join_btn'
+  join_online_page:
+    - text: 'join_online_text1'
+      media: 'join_online_image'
+    - text: 'join_online_text2'
+      markup: 'join_online_btn'
+  join_daily_page:
+    - text: 'join_daily_text1'
+      media: 'join_daily_image'
+    - text: 'join_daily_text2'
+    - text: 'join_daily_text3'
+      markup: 'join_daily_btn'
+  join_practice_page:
+    - text: 'join_practice_text1'
+      media: 'join_practice_image'
+    - text: 'join_practice_text2'
+      markup: 'join_practice_btn'
+  join_contract_page:
+    - text: 'join_contract_text1'
+      media: 'join_contract_image'
+    - text: 'join_contract_text2'
+      markup: 'join_contract_btn'
+    #
+  call_page:
+    - text: 'call_text'
+      media: 'call_image'
+      markup: 'call_btn'
+    #
+  chat_page:
+    - text: '' # empty
+      media: 'chat_image'
+      markup: 'chat_btn'
+    #
+  faq_page:
+    - text: 'faq_text'
+      markup: 'faq_btn'
+  faq_1_page:
+    - text: 'faq_1_text'
+      markup: 'faq_question_btn'
+  faq_2_page:
+    - text: 'faq_2_text'
+      markup: 'faq_question_btn'
+  faq_3_page:
+    - text: 'faq_3_text'
+      markup: 'faq_question_btn'
+  faq_4_page:
+    - text: 'faq_4_text'
+      markup: 'faq_question_btn'
+  faq_5_page:
+    - text: 'faq_5_text'
+      markup: 'faq_question_btn'
+  faq_6_page:
+    - text: 'faq_6_text'
+      markup: 'faq_question_btn'
+  faq_7_page:
+    - text: 'faq_7_text'
+      markup: 'faq_question_btn'
+  faq_8_page:
+    - text: 'faq_8_text'
+      markup: 'faq_question_btn'
+  faq_9_page:
+    - text: 'faq_9_text'
+      markup: 'faq_question_btn'
+
+# Dialog type:
+# required field: name
+# required field: type ('receiver')
+# required field: entries (array of DialogEntry type)
+# DialogEntry type:
+# required field: post (Post type)
+# optional field: label
+# optional field: await ('text', 'files', 'all')
+dialogs:
+  join_submit_diag:
+    name: 'Application for education'
+    type: 'receiver'
+    entries:
+      - post:
+          text: 'join_submit_text'
+          media: 'join_submit_image'
+          markup: 'join_return_btn'
+        label: 'Personal data'
+        await: 'all'
+      - post:
+          text: 'Thank you, your request has been accepted. Please wait for a response.'
+  call_question_diag:
+    name: 'Ask a question'
+    type: 'receiver'
+    entries:
+      - post:
+          text: 'call_diag_text'
+          markup: 'call_return_btn'
+        label: 'Question'
+        await: 'text'
+      - post:
+          text: 'Your question has been accepted. Please wait for an answer.'
+  call_manager_diag:
+    name: 'Contact channel manager'
+    type: 'receiver'
+    entries:
+      - post:
+          text: 'call_diag_text'
+          markup: 'call_return_btn'
+        label: 'Message to the manager'
+        await: 'all'
+      - post:
+          text: 'Message delivered.'
+  call_news_diag:
+    name: 'Suggest a news item'
+    type: 'receiver'
+    entries:
+      - post:
+          text: 'call_diag_text'
+          markup: 'call_return_btn'
+        label: 'News'
+        await: 'all'
+      - post:
+          text: 'News delivered.'

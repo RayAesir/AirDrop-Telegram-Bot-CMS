@@ -1,0 +1,1 @@
+Enter the text you want to share with channel admins. If you need to attach document(s) and/or image(s), send them along with the text message.
