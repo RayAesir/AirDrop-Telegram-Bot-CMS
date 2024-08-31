@@ -23,15 +23,19 @@ endif()
 # set path to TgBot library
 # https://github.com/reo7sp/tgbot-cpp/blob/master/samples/echobot/CMakeLists.txt
 set(TG_LIB "UNSUPPORTED COMPILER")
+message(STATUS "COMPILER=${CMAKE_CXX_COMPILER_ID}")
+message(STATUS "SYSTEM=${CMAKE_SYSTEM_PROCESSOR}")
 if(CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     set(TG_LIB ${VCPKG_INSTALLED_DIR}/x64-windows/lib/TgBot.lib)
 endif()
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_x64")
+    if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
         set(TG_LIB ${VCPKG_INSTALLED_DIR}/x64-linux/lib/libTgBot.a)
+        message(STATUS "ARCH=x86_64")
     endif()
     if(CMAKE_SYSTEM_PROCESSOR MATCHES "aarch64")
         set(TG_LIB ${VCPKG_INSTALLED_DIR}/arm64-linux/lib/libTgBot.a)
+        message(STATUS "ARCH=aarch64")
     endif()
 endif()
 
@@ -66,5 +70,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     ${CURL_LIBRARIES}
     spdlog::spdlog
     uni-algo::uni-algo
-    yaml-cpp
+    yaml-cpp::yaml-cpp
 )
