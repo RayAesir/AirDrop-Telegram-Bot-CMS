@@ -34,6 +34,11 @@ Put the media and markdown files into ./bin/content folder.
 
 Install [vcpkg](https://github.com/microsoft/vcpkg).
 
+```Console
+cd AirDrop-Telegram-Bot-CMS
+cmake -B build -S . --preset release-x64-linux
+```
+
 Reccomended to use VSCode with CMake Tools extension.
 
 ## TODO
@@ -43,7 +48,7 @@ Reccomended to use VSCode with CMake Tools extension.
 
 ## Dependencies
 
-Logger: [spdlog](https://github.com/gabime/spdlog)
-Unicode: [uni-algo](https://github.com/uni-algo/uni-algo)
-Telegram Bot: [tgbot-cpp](https://github.com/reo7sp/tgbot-cpp)
+Logger: [spdlog](https://github.com/gabime/spdlog)  
+Unicode: [uni-algo](https://github.com/uni-algo/uni-algo)  
+Telegram Bot: [tgbot-cpp](https://github.com/reo7sp/tgbot-cpp)  
 YAML: [yaml-cpp](https://github.com/jbeder/yaml-cpp)
